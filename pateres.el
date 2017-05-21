@@ -1,7 +1,8 @@
+(require 'greek)
+
 (defvar pateres-url "http://www.imgap.gr/file1/AG-Pateres/AG%20KeimenoMetafrasi/KD/")
 
 (defun pateres (document gr en)
-  (require 'greek)
   (with-temp-buffer
     (let* ((output-buffer (buffer-name))
            (chap " [0-9]+[ ]*$\\|^[ ]+$")
@@ -36,6 +37,7 @@
 
 (pateres "01. Math.htm" "Ματθ." "Matthew")
 (pateres "02. Mark.htm" "Μαρκ." "Mark")
-(pateres "03. Louk.htm" "Λουκ." "Luke")
+;; TODO fix Luke:
+;; (pateres "03. Louk.htm" "Λουκ." "Luke")
 (pateres "04. Ioan.htm" "Ιω." "John")
 
